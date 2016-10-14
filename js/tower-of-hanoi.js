@@ -37,15 +37,15 @@ var towerOfHanoi =(function(){
 		game.createBoard(totDisk);
 		game.init();
 		game.totalDisk = totDisk;
-		var level = totDisk;
-		var i=1;
-		for(i = 1; i <= totDisk ; i++)
+		var level = 1;
+		var i=totDisk;
+		for(i = totDisk; i >= 1 ; i--)
 		{
 			game["d" + i] = {id:i}		
 			game.pegs.peg1.disks.push(game["d" + i]);
 			var d = $("<div/>",{id:i,class:'disk' + " disk" + i , draggable:"false",style:"bottom:" + (game.diskHeight * level) + "px"});
 			$("#tower1").append(d);
-			level--;
+			level++;
 		}		
 	}
 
@@ -79,7 +79,7 @@ var towerOfHanoi =(function(){
 		        game.fromPeg.disks.splice(game.fromPeg.disks.indexOf(targetDisk),1);        
 		        //Change the originating pegs top disk
 		        if(game.fromPeg.disks.length>0){
-		        	game.fromPeg.topDisk = game.fromPeg.disks[0].id;	
+		        	game.fromPeg.topDisk = game.fromPeg.disks[game.fromPeg.disks.length-1].id;	
 		        }else{
 		        	game.fromPeg.topDisk = null;
 		        }
