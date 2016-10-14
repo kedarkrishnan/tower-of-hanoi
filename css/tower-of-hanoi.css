@@ -103,3 +103,14 @@
 	left: 50%;	
 	margin-left: -47.5%;
 }
+
+/* Github Ribbon */
+.ribbon{
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	border: 0; 
+	width: 149px; 
+	height: 149px;
+	z-index: 1100;
+}
