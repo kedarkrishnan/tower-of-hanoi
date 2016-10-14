@@ -1,0 +1,105 @@
+#game,#rules,#board,#status-bar,#message{
+	width: 100%;
+	max-width: 350px;
+	margin:0px auto;
+}
+#rules,#status-bar{	
+	margin:50px auto;
+}
+#rules b{
+	display: block;
+}
+#status-bar{
+	height: 30px;
+}
+#game{
+	display: none;
+}
+.start-menu{
+	border-top:1px solid #000;
+	padding: 15px 0;
+}
+.select{	
+	width: 100%;
+}
+.btn{
+	margin: 15px 0;
+	display: block;
+}
+#board{	
+	margin:auto;
+	position: relative;
+}
+.tower{
+	display: block;
+    position: relative;
+    padding: 0;
+    height: 200px;
+}
+.deck{
+	position: absolute;
+	bottom: 0;
+	height: 20px;
+	width: 100%;
+	background-color: #551199;
+}
+.peg{
+	position: absolute;
+	bottom: 20px;
+	height: 160px;
+	width:15px;
+	left: 50%;
+	margin-left: -7.5px;
+	background-color: #551199;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;	
+}
+
+.disk{
+	position: absolute;		
+	height: 20px;
+	width:100%;
+	background-color: #0abcef;
+	border: 1px solid #03a9f4;
+	border-radius:15px; 
+	z-index: 1000;
+	cursor: not-allowed;
+}
+.disk1{
+	width:35%;
+	left: 50%;
+	margin-left: -17.5%;
+}
+.disk2{
+	width:45%;
+	left: 50%;	
+	margin-left: -22.5%;
+}
+.disk3{
+	width:55%;
+	left: 50%;	
+	margin-left: -27.5%;
+}
+.disk4{
+	width:65%;
+	left: 50%;	
+	margin-left: -32.5%;
+}
+.disk5{
+	bottom: 65px;
+	width:75%;
+	left: 50%;	
+	margin-left: -37.5%;
+}
+.disk6{
+	bottom: 45px;
+	width:85%;
+	left: 50%;	
+	margin-left: -42.5%;
+}
+.disk7{
+	bottom: 25px;
+	width:95%;
+	left: 50%;	
+	margin-left: -47.5%;
+}

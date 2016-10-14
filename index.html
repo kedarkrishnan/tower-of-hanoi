@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tower of Hanoi</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/tower-of-hanoi.css">
+</head>
+<body>
+	<div class="container">				
+		<div id="rules">			
+			<h1 class="text-center">Tower of Hanoi</h1>
+			<b>Objective</b> Move all the disks over to the right most tower.			
+			<b>Rules</b>
+			<ul>
+				<li>You can move only one disk at a time.</li>
+				<li>You cannot place a larger disk onto a smaller disk. </li>
+			</ul>
+			<div class="text-center start-menu">
+				No of Disks<br>
+				<select class="select">
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+				<button type="button" class="btn col-md-12" onclick="startGame()">Start Game</button>
+			</div>
+		</div>
+		<div id="game">
+			<div id="status-bar">					
+				<span class="pull-right">Moves: <span id="moves"></span></span>
+				<small></small>				
+			</div>
+			<div id="board"></div>
+			<button type="button" class="btn col-md-12" onclick="resetGame()">Restart</button>
+			<button type="button" class="btn col-md-12" onclick="newGame()">New Game</button>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>	
+	<script src="./js/tower-of-hanoi.js"></script>
+	<script src="./js/game.js"></script>
+</body>
+</html>
