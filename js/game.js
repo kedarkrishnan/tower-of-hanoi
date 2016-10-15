@@ -3,13 +3,6 @@ $(document).ready(function(){
 		towerOfHanoi.decorateDisk($(this))
 	})
 
-	$('#game').on('drop','.peg',function(event){
-		event.preventDefault();
-        event.stopPropagation();       
-       	towerOfHanoi.move($(event.target))		
-       	$("#moves").html(towerOfHanoi.moveCount());
-	});
-
 
 	$('#game').on('dragenter','.peg',function(event){		
 		event.preventDefault();
@@ -20,7 +13,19 @@ $(document).ready(function(){
 		event.preventDefault();
         event.stopPropagation();        
 	})
-})
+
+	$('#game').on('drop','.peg',function(event){
+		event.preventDefault();
+        event.stopPropagation();       
+       	towerOfHanoi.move($(event.target))		
+       	$("#moves").html(towerOfHanoi.moveCount());
+	});	
+
+});
+
+function dragstart_handler(event){
+	event.dataTransfer.setData("text/plain", event.target.id);
+}
 
 function resetGame(){
 	startGame();

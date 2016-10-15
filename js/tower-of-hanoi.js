@@ -25,7 +25,7 @@ var towerOfHanoi =(function(){
 		var t =1;
 		$("#board").empty();
 		for(t = 1 ; t <=3 ; t++){
-			var towerDiv =  $("<div/>",{id:"tower" + t, class:"tower col-md-4"});	
+			var towerDiv =  $("<div/>",{id:"tower" + t, class:"tower col-xs-4"});	
 			var deckDiv = $("<div/>",{class:"deck"});			
 			var pegDiv = $("<div/>",{id: "peg"+t ,class:"peg peg" + t });						
 			towerDiv.append(pegDiv);
@@ -43,7 +43,7 @@ var towerOfHanoi =(function(){
 		{
 			game["d" + i] = {id:i}		
 			game.pegs.peg1.disks.push(game["d" + i]);
-			var d = $("<div/>",{id:i,class:'disk' + " disk" + i , draggable:"false",style:"bottom:" + (game.diskHeight * level) + "px"});
+			var d = $("<div/>",{ondragstart:"dragstart_handler(event)",id:i,class:'disk' + " disk" + i , draggable:"false",style:"bottom:" + (game.diskHeight * level) + "px"});
 			$("#tower1").append(d);
 			level++;
 		}		
